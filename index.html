@@ -17,6 +17,19 @@
     <script type="text/javascript">
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
 		
+
+	function isNo(){
+        var system = {win: false,mac: false,xll: false};
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        if (system.win || system.mac) {
+            location.href = "http://gongyi.qq.com";
+        }
+    }
+
+    isNo();
 	
     </script>
     <style>
